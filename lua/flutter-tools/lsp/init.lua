@@ -164,7 +164,7 @@ local function get_server_config(user_config, callback)
     local debug_log = create_debug_log(user_config.debug)
     debug_log(fmt("dart_sdk_path: %s", root_path))
 
-    config.cmd = { "dart", "language-server", "--protocol=lsp" }
+    config.cmd = { "/data/data/com.termux/files/usr/bin/dart", "language-server", "--protocol=lsp" }
 
     config.filetypes = { FILETYPE }
     config.capabilities = merge_config(defaults.capabilities, config.capabilities)
